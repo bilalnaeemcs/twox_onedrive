@@ -1,0 +1,19 @@
+{
+  "name": "PlaySpeed",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "changeSpeed",
+  "homepage_url": "http://bilalnaeem.netlify.app",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {},
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}
