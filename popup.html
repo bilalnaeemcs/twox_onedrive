@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <template id="li_template">
+      <li>
+        <a>
+          <h3 class="title">Tab Title</h3>
+          <p class="pathname">Tab Pathname</p>
+        </a>
+      </li>
+    </template>
+
+    <!-- <h1>Change Playback Speed</h1> -->
+    <!-- <button type="button" class="btn btn-success btn-arrow-right" id="increaseSpeed">Increase Speed</button> -->
+    <!-- <button type="button" class="btn btn-success btn-arrow-left" id="decreaseSpeed">Decrease Speed</button> -->
+    <!-- bootstrap display for variables -->
+
+
+    <h1 class="mb-0 font-weight-bold text-white bg-dark p-4 ">Playback Speed Control</h1>
+    <div class="text-center mt-3">
+      <button type="button" class="btn btn-success btn-arrow-right" id="increase-speed-btn">
+        <i class="bi bi-arrow-right-square"></i>
+      </button>
+      <!-- add spacing between buttons -->
+      <span class="mx-3"></span>
+      <button type="button" class="btn btn-warning btn-arrow-left" id="decrease-speed-btn">
+        <i class="bi bi-arrow-left-square"></i>
+      </button>
+    </div>
+    <p class="text-center mt-3 font-weight-bold text-uppercase text-white bg-dark p-2 ">Current Speed: <span id="current-speed">1x</span></p>
+
+    <ul></ul>
+    <script src="./popup.js" type="module"></script>
+
+  </body>
+</html>
