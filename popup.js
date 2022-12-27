@@ -3,6 +3,15 @@
 // import speedupVar from './speedupVar';
 
 var speedupVar = 1;
+chrome.tabs.executeScript({
+    code: 'document.querySelector("video").playbackRate',
+  },
+  (result) => {
+    speedupVar = result[0];
+    console.log("current speed:", speedupVar);
+    updateSpeed();
+  }
+);
 
 function updateSpeed() {
     document.getElementById("current-speed").textContent = speedupVar + "x";
