@@ -36,8 +36,29 @@
         <i class="bi bi-arrow-right-square"></i>
       </button>
     </div>
-    <p class="text-center mt-3 font-weight-bold text-uppercase text-white bg-dark p-2 ">Current Speed: <span id="current-speed">1x</span></p>
 
+    <p class="text-center mt-3 font-weight-bold text-uppercase text-white bg-dark p-2 ">Current Speed: <span id="current-speed">1x</span></p>
+    <div class="text-center mt-4 mb-3">
+      <button type="button" class="btn btn-primary btn-lg" id="summarize-btn">
+        <i class="bi bi-file-text"></i> Summarize
+      </button>
+    </div>
+    <div class="text-center mt-3">
+      <button type="button" class="btn btn-link" id="options-btn">
+        Configure API Key
+      </button>
+    </div>
+    <div class="text-center mt-3">
+      <div class="bg-light p-3 rounded">
+        <p class="mb-2">Speech Rate: <span id="speech-rate">2.5x</span></p>
+        <button type="button" class="btn btn-sm btn-info mr-2" id="decrease-speech-btn">
+          <i class="bi bi-dash-circle"></i> Slower
+        </button>
+        <button type="button" class="btn btn-sm btn-info" id="increase-speech-btn">
+          <i class="bi bi-plus-circle"></i> Faster
+        </button>
+      </div>
+    </div>
     <ul></ul>
     <script src="./popup.js" type="module"></script>
 
