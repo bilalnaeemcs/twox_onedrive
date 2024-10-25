@@ -3,23 +3,38 @@
   "name": "Video Speed Controller",
   "version": "1.0",
   "description": "Control video playback speed and summarize content",
+
   "options_ui": {
-    "page": "options.html",
+    "page": "src/views/options.html",
     "open_in_tab": true
   },
+
+  "action": {
+    "default_popup": "src/views/popup.html"
+  },
+
   "permissions": [
-    "https://*/*",
-    "http://*/*",
-    "tabs",
     "activeTab",
     "scripting",
     "storage"
   ],
+
   "host_permissions": [
-    "https://api.openai.com/*"
+    "<all_urls>"
   ],
-  "action": {
-    "default_popup": "popup.html"
-  }
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://stackpath.bootstrapcdn.com https://cdn.jsdelivr.net;"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/js/*",
+        "src/css/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
 
